@@ -36,7 +36,7 @@ public class JdkProviders {
 	 * @return a list of provider names
 	 */
 	public List<String> basicNames() {
-		return Arrays.asList("current", "default", "javahome", "path", "linked", "jbang");
+		return Arrays.asList("current", "default", "javahome", "path", "linked", "jbang", "sdkman");
 	}
 
 	/**

@@ -19,7 +19,7 @@ public class TestJdkProviders extends BaseTest {
 	void testBasicNames() {
 		assertThat(
 				JdkProviders.instance().basicNames(),
-				contains("current", "default", "javahome", "path", "linked", "jbang"));
+				contains("current", "default", "javahome", "path", "linked", "jbang", "sdkman"));
 	}
 
 	@Test
@@ -33,11 +33,11 @@ public class TestJdkProviders extends BaseTest {
 						"path",
 						"linked",
 						"jbang",
+						"sdkman",
 						"linux",
 						"mise",
 						"multihome",
-						"scoop",
-						"sdkman"));
+						"scoop"));
 	}
 
 	@Test
@@ -60,7 +60,8 @@ public class TestJdkProviders extends BaseTest {
 						instanceOf(JavaHomeJdkProvider.class),
 						instanceOf(PathJdkProvider.class),
 						instanceOf(LinkedJdkProvider.class),
-						instanceOf(JBangJdkProvider.class)));
+						instanceOf(JBangJdkProvider.class),
+						instanceOf(SdkmanJdkProvider.class)));
 	}
 
 	@Test
@@ -74,11 +75,11 @@ public class TestJdkProviders extends BaseTest {
 						instanceOf(PathJdkProvider.class),
 						instanceOf(LinkedJdkProvider.class),
 						instanceOf(JBangJdkProvider.class),
+						instanceOf(SdkmanJdkProvider.class),
 						instanceOf(LinuxJdkProvider.class),
 						instanceOf(MiseJdkProvider.class),
 						instanceOf(MultiHomeJdkProvider.class),
-						instanceOf(ScoopJdkProvider.class),
-						instanceOf(SdkmanJdkProvider.class)));
+						instanceOf(ScoopJdkProvider.class)));
 	}
 
 	@Test
